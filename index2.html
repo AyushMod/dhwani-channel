@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage | Dancing Soul of Dhwani</title>
+    <meta name="description" content="Welcome to https://dancesoulofdhwani.000webhostapp.com"
+    />
+    <meta name="keywords" content="description" />
+    <link rel="canonical" href="description.html" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="icon" href="IMG-20210806-WA0014.jpg" type="image/jpeg" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="Dhwani" />
+    <meta name="application-name" content="Dhwani" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+    <meta name="theme-color" content="#1900ff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+
+  background: #242526;
+}
+nav .wrapper{
+  position: relative;
+  max-width: 1300px;
+  padding: 0px 30px;
+  height: 70px;
+  line-height: 70px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .logo a{
+  color: #f2f2f2;
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.wrapper .nav-links{
+  display: inline-flex;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nav-links li a:hover{
+  background: #3A3B3C;
+}
+.nav-links .mobile-item{
+  display: none;
+}
+.nav-links .drop-menu{
+  position: absolute;
+  background: #242526;
+  width: 600px;
+  line-height: 45px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 16px 20px rgba(0,0,0,0.15);
+}
+.nav-links li:hover .drop-menu,
+.nav-links li:hover .mega-box{
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a{
+  width: 200%;
+  display: inline-block;
+  padding: 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.mega-box{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  top: 85px;
+  opacity: 0;
+  visibility: hidden;
+}
+.mega-box .content{
+  background: #242526;
+  padding: 25px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+}
+.mega-box .content .row{
+  width: calc(25% - 30px);
+  line-height: 45px;
+}
+.content .row img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content .row header{
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 500;
+}
+.content .row .mega-links{
+  margin-left: -40px;
+  border-left: 1px solid rgba(255,255,255,0.09);
+}
+.row .mega-links li{
+  padding: 0 20px;
+}
+.row .mega-links li a{
+  padding: 0px;
+  padding: 0 20px;
+  color: #d9d9d9;
+  font-size: 14px;
+  display: block;
+}
+.row .mega-links li a:hover{
+  color: #f2f2f2;
+}
+.wrapper .btn{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn{
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+.heading{
+    padding-top: 90px;
+    font-size: 40px;
+}
+.heading p{
+    padding-top: 20px;
+    font-size: 20px;
+}
+@media screen and (max-width: 970px) {
+  .wrapper .btn{
+    display: block;
+  }
+  .wrapper .nav-links{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: #242526;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
+    transition: all 0.3s ease;
+  }
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3A3B3C;
+  }
+  #menu-btn:checked ~ .nav-links{
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn{
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn{
+    display: block;
+  }
+  .nav-links li{
+    margin: 15px 10px;
+  }
+  .nav-links li a{
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu{
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+  #showMega:checked ~ .mega-box{
+    max-height: 100%;
+  }
+  .nav-links .desktop-item{
+    display: none;
+  }
+  .nav-links .mobile-item{
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover{
+    background: #3A3B3C;
+  }
+  .drop-menu li{
+    margin: 0;
+  }
+  .drop-menu li a{
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .mega-box{
+    position: static;
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .mega-box .content{
+    box-shadow: none;
+    flex-direction: column;
+    padding: 20px 20px 0 20px;
+  }
+  .mega-box .content .row{
+    width: 100%;
+    margin-bottom: 15px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .mega-box .content .row:nth-child(1),
+  .mega-box .content .row:nth-child(2){
+    border-top: 0px;
+  }
+  .content .row .mega-links{
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li{
+    margin: 0;
+  }
+  .content .row header{
+    font-size: 19px;
+  }
+}
+nav input{
+  display: none;
+}
+    </style>
+  </head>
+<body>
+      <nav>
+    <div class="wrapper">
+      <div class="logo"><a href="#">DancingSoulofDhwani</a></div>
+      <input type="radio" name="slider" id="menu-btn">
+      <input type="radio" name="slider" id="close-btn">
+      <ul class="nav-links">
+        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+        <li><a href="#">Home</a></li>
+        <li>
+          <a href="#" class="desktop-item">Channels</a>
+          <input type="checkbox" id="showDrop">
+          <label for="showDrop" class="mobile-item">Channels</label>
+          <ul class="drop-menu">
+            <li><a href="#">Dhwani Jain 6 C</a></li>
+            <li><a href="#">Dancing Soul Of Dhwani</a></li>
+          </ul>
+        <li><a href="#">About</a></li>
+        </li>
+        <li>
+          <a href="#" class="desktop-item">Categories</a>
+          <input type="checkbox" id="showMega">
+          <label for="showMega" class="mobile-item">Categories</label>
+          <div class="mega-box">
+            <div class="content">
+              <div class="row">
+                <img src="IMG-20210806-WA0014.jpg" alt="">
+              </div>
+              <div class="row">
+                <header>My videos Categories</header>
+                <ul class="mega-links">
+                  <li><a href="#">Transition Videos</a></li>
+                  <li><a href="#">Garba</a></li>
+                  <li><a href="#">Easy Dance</a></li>
+                  <li><a href="#">Jain Song Dance</a></li>
+                  <li><a href="#">Kids Dance</a></li>
+                  <li><a href="#">Mothers Day Dance</a></li>
+                  <li><a href="#">Fathers Day Dance</a></li>
+                  <li><a href="#">Bollywood Dance Cover</a></li>
+                  <li><a href="#">Hacks</a></li>
+
+                </ul>
+              </div>
+              <div class="row">
+                <ul class="mega-links">
+                  <li><a href="#">Sitting Choreography</a></li>
+                  <li><a href="#">Salsa</a></li>
+                  <li><a href="#">SANGEET CHOREOGRAPHY</a></li>
+                  <li><a href="#">Fun Dance</a></li>
+                  <li><a href="#">Belly Dance</a></li>
+                  <li><a href="#">Classical Dance</a></li>
+                  <li><a href="">Freestyle</a></li>
+                  <li><a href="">Western</a></li>
+                  <li><a href="">Indian</a></li>
+                  <li><a href="#">Dares</a></li>
+                </ul>
+              </div>
+              <div class="row">
+                <ul class="mega-links">
+                  <li><a href="#">Kpop Dance Cover</a></li>
+                  <li><a href="#">Semi Classical</a></li>
+                  <li><a href="#">Patriotic Song Dance</a></li>
+                  <li><a href="#">Celebration</a></li>
+                  <li><a href="#">Crafts</a></li>
+                  <li><a href="#">Drawing</a></li>
+                  <li><a href="#">Pranks</a></li>
+                  <li><a href="#">Challenges</a></li>
+                  <li><a href="#">Vlogs</a></li>
+                  <li><a href="#">Behind The Scenes</a></li>
+                  <li><a href="#">Testing</a></li>
+                  <li><a href="#">Diy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </li>
+      </ul>
+      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    </div>
+  </nav>
+  <div class="heading">
+    <center>
+      <h2>Welcome To Dancing Soul of Dhwani</h2>
+      <p>Hi there this is <b>Dhwani Jain</b> and in this website<br> you can see all my previously and recently uploaded websites.</p><br><br>
+
+  <div class="wrapper5" style="text">
+    <div class="static-txt">I'm a</div>
+    <ul class="dynamic-txts">
+      <li><span>YouTuber</span></li>
+      <li><span>Designer</span></li>
+      <li><span>Developer</span></li>
+      <li><span>Freelancer</span></li>
+    </ul>
+  </div>
+  <style>
+.wrapper5{
+  display: flex;
+}
+.wrapper5 .static-txt{
+  color: #000000;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper5 .dynamic-txts{
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: #FC6D6D;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #343F4F;
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
+}
+  </style>
+  </center>
+     <br><h2 style="text-align: center;">
+      Mostly Viewed Videos
+    </h2><br><br>
+  <div class="row">
+  <div class="col-sm-3">
+    <div class="card2">
+      <div class="zoom">
+      <img src="hqdefault(10).jpg" class="card-img-top" alt="...">
+        <style>
+          .card2{
+  box-shadow: 70px 70px 10px 0 rgba(0, 0, 0, 0.2);
+            width: 400px;
+            padding: 30px;
+          }
+.zoom {
+  transition: transform .70s; /* Animation */
+  width: 340px;
+  height: 30px;
+  margin: 50% auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+</style>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Maine Payal Hai | Dancing Soul Of Dhwani</h5>
+        <p class="card-text">Maine Payal hai chhankai<br>
+                            Aankh mein kajra <br>
+                            Chunnad udd udd jaye.</p>
+        <a href="https://www.youtube.com/embed/96kGe-YQbPE" class="btn btn-primary">See the Video</a>
+      </div>
+    </div>
+</div>
+<br><br><BR><BR>
+</style>
+    <div class="card3">
+      <div class="zoom">
+      <img src="hqdefault(11).jpg" class="card-img-top" alt="...">
+        <style>
+          .row{
+            display: flex;
+            padding: 10px;
+            justify-content: space-evenly;
+          }
+          .card2,
+          .card3{
+            display: block;
+          }
+          .card3{
+  box-shadow: 70px 70px 10px 0 rgba(0, 0, 0, 0.2);
+            width: 400px;
+            padding: 30px;
+          }
+.zoom {
+  transition: transform .70s; /* Animation */
+  width: 340px;
+  height: 30px;
+  margin: 50% auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+</style>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Chor Denge | Dancing Soul Of Dhwani</h5>
+        <p class="card-text">Dhwani's Dance on Chor Denge</p>
+        <a href="https://www.youtube.com/embed/LrerFH0xUOo" class="btn btn-primary">See the Video</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<br><br>
+</div><BR><BR>
+</style><br><br><br><br><br><br><br><br>
+<div class="wrapper4">
+    <header>Send us a Message</header>
+    <form action="#">
+      <div class="dbl-field">
+        <div class="field">
+          <input type="text" name="name" placeholder="Enter your name">
+          <i class='fas fa-user'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="email" placeholder="Enter your email">
+          <i class='fas fa-envelope'></i>
+        </div>
+      </div>
+      <div class="dbl-field">
+        <div class="field">
+          <input type="text" name="phone" placeholder="Enter your phone">
+          <i class='fas fa-phone-alt'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="website" placeholder="Enter your website">
+          <i class='fas fa-globe'></i>
+        </div>
+      </div>
+      <div class="message">
+        <textarea placeholder="Write your message" name="message"></textarea>
+        <i class="material-icons"></i>
+      </div>
+      <div class="button-area">
+        <button type="submit">Send Message</button>
+        <span></span>
+      </div>
+    </form>
+  </div>
+<style>
+::selection{
+  color: #fff;
+  background: #0D6EFD;
+}
+.wrapper4{
+  width: 715px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+}
+.wrapper4 header{
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-bottom: 1px solid #ccc;
+}
+.wrapper4 form{
+  margin: 35px 30px;
+}
+.wrapper4 form.disabled{
+  pointer-events: none;
+  opacity: 0.7;
+}
+form .dbl-field{
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+.dbl-field .field{
+  height: 50px;
+  display: flex;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+}
+.wrapper4 form i{
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: #ccc;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+form .field input,
+form .message textarea{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.field input::placeholder,
+.message textarea::placeholder{
+  color: #ccc;
+}
+.field input:focus,
+.message textarea:focus{
+  padding-left: 47px;
+  border: 2px solid #0D6EFD;
+}
+.field input:focus ~ i,
+.message textarea:focus ~ i{
+  color: #0D6EFD;
+}
+form .message{
+  position: relative;
+}
+form .message i{
+  top: 30px;
+  font-size: 20px;
+}
+form .message textarea{
+  min-height: 130px;
+  max-height: 230px;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 15px 20px 0 48px;
+}
+form .message textarea::-webkit-scrollbar{
+  width: 0px;
+}
+.message textarea:focus{
+  padding-top: 14px;
+}
+form .button-area{
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+.button-area button{
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 13px 25px;
+  background: #0D6EFD;
+  transition: background 0.3s ease;
+}
+.button-area button:hover{
+  background: #025ce3;
+}
+.button-area span{
+  font-size: 17px;
+  margin-left: 30px;
+  display: none;
+}
+@media (max-width: 600px){
+  .wrapper4 header{
+    text-align: center;
+  }
+  .wrapper4 form{
+    margin: 35px 20px;
+  }
+  form .dbl-field{
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  form .dbl-field .field{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+  }
+  form .message textarea{
+    resize: none;
+  }
+  form .button-area{
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .button-area button{
+    width: 100%;
+    padding: 11px 0;
+    font-size: 16px;
+  }
+  .button-area span{
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+</style>
+<script>
+  //Contact Form in PHP
+const form = document.querySelector("form"),
+statusTxt = form.querySelector(".button-area span");
+form.onsubmit = (e)=>{
+  e.preventDefault();
+  statusTxt.style.color = "#0D6EFD";
+  statusTxt.style.display = "block";
+  statusTxt.innerText = "Sending your message...";
+  form.classList.add("disabled");
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "message.php", true);
+  xhr.onload = ()=>{
+    if(xhr.readyState == 4 && xhr.status == 200){
+      let response = xhr.response;
+      if(response.indexOf("required") != -1 || response.indexOf("valid") != -1 || response.indexOf("failed") != -1){
+        statusTxt.style.color = "red";
+      }else{
+        form.reset();
+        setTimeout(()=>{
+          statusTxt.style.display = "none";
+        }, 3000);
+      }
+      statusTxt.innerText = response;
+      form.classList.remove("disabled");
+    }
+  }
+  let formData = new FormData(form);
+  xhr.send(formData);
+}
+</script>
+</div>
+</body>
+</html>
