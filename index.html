@@ -36,6 +36,22 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
 nav{
   position: fixed;
   z-index: 99;
@@ -514,6 +530,67 @@ let letter = "";
   </div>
 </div>
 </div>
+<h1 style="text-align: center;padding: 60px 10px 30px;">Contact</h1>
+<center>
+    <div class="card">
+      <img src="IMG-20210806-WA0014.jpg" alt="Dhwani Jain" style="width:100%">
+      <div class="container">
+        <h2>Dhwani Jain</h2>
+        <p class="title">Youtuber</p>
+        <p>I am Dhwani Jain the producer of this website.</p>
+        <p>dhwanijain054@gmail.com</p>
+        <p><button class="button" href="mailto:dhwanijain054@gmail.com">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</center>
+<style>
+
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 30%;
+    display: inline-block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 84px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 30%;
+}
+.card img{
+  width: 100px;
+  height: 300px;
+}
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: inline-block;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 4;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
 <br><br>
 </div><BR><BR>
 </style><br><br><br><br><br><br><br><br>
