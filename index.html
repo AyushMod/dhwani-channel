@@ -382,81 +382,61 @@ nav input{
     <center>
       <h2>Welcome To Dancing Soul of Dhwani</h2>
       <p>Hi there this is <b>Dhwani Jain</b> and in this website<br> you can see all my previously and recently uploaded websites.</p><br><br>
-<style>
-  
-.main
-{
-display: flex;
-}
-.main .text
-{
-color: #000;
-font-size: 30px;
-font-weight: 200;
-}
-.main .option
-{
-margin-left: 15px;
-height: 30px;
-line-height: 30px;
-overflow: hidden;
-}
-.option li
-{
-list-style: none;
-color: #face30;
-font-size: 30px;
-font-weight: 300;
-position: absolute;
-top: 0;
-animation: slide 12s steps(4) infinite;
-}
-@keyframes slide
-{
-100%
-{
-top: -360px;
-}
-}
-.option li span
-{
-position: relative;
-margin: 5px 0;
-line-height: 90px;
-}
-.option li span::after
-{
-content: '';
-position: absolute;
-left: 0;
-height: 100%;
-width: 100%;
-background: #111;
-border-left: 2px solid #face30;
-animation: typing 3s steps(10) infinite;
-}
-@keyframes typing
-{
-40%, 60%
-{
-left: calc(100% + 30px);
-}
-100%
-{
-left: 0;
-}
-}
-</style>
-      
-<div class="main">
-<div class="text">I'm a</div>
-<ul class="option">
-<li><span>Progammer</span></li>
-<li><span>Designer</span></li>
-<li><span>Developer</span></li>
-<li><span>Freelancer</span></li>
-</ul>
-</div>
+      <div class="intro">
+        <h1>I'm a</h1>
+        <h1 class="typing"></h1>
+      </div>
+      <style>
+        .intro{
+          display: flex;
+          color: #030303;
+          height: 100vh;
+          text-align: center;
+        }
+        .typing{
+          margin-left: 10px;
+        }
+        .typing::after{
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 8%;
+          border-right: 4px solid black;
+          animation: blink 0.5s infinite ease;
+        }
+        @keyframes blink{
+          0%{
+            opacity: 0;
+          }
+          100%{
+            opacity: 1;
+          }
+        }
+      </style>
+      <script>
+const texts = ["Dancer", "Youtuber", "Creative"]
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+
+    if (count === texts.length){
+        count = 0;
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.querySelector(".typing").textContent = letter;
+    if (letter.length === currentText.length){
+        count++;
+        index = 0;
+    }
+    setTimeout(type, 400);
+})();
+
+      </script>
   </center>
      <br><h2 style="text-align: center;">
       Mostly Viewed Videos
