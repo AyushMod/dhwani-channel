@@ -24,555 +24,229 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
+   
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	</HEAD>
+	<BODY>
+   <header>
+   <nav>
+   <div class="navbar">
+     <div class="logo">
+      <!--- <img src="images/logo.png" alt="">--->
+     </div>
+     <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Latest</a></li>
+        <li><a href="#">Category</a></li>
+         <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="search-box">
+        <input type="text" placeholder="Search here...">
+        <a href="#"><i class="fas fa-search"></i></a>
+      </div>
+   </div>
+   </nav>
+   <div class="content">
+     <div class="text-content">
+       <div class="text">Hello, It's Me </div>
+       <div class="name">Hannah Lennon</div>
+       <div class="job">
+         <div class="job">
+           <span>And I'm a</span>
+            <div class="typing-text">
+              <span class="one">Youtuber,</span>
+              <span class="two">Blogger.</span>
+            </div>
+          </div>
+       </div>
+       <div class="buttons">
+   <button>About Me</button>
+   <button>Follow Me</button>
+ </div>
+     </div>
+     <div class="girl">
+       <!--<img src="images/girl.png" alt="">-->
+     </div>
+   </div>
+   <div class="media-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-pinterest"></i></a>
+  </div>
+ </header>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-nav{
-  position: fixed;
-  z-index: 99;
-  width: 100%;
 
-  background: #242526;
+header{
+  height: 100vh;
+  width: 100%;
+  background: url("images/background.png") no-repeat;
+  background-position: center;
 }
-nav .wrapper{
-  position: relative;
-  max-width: 1300px;
-  padding: 0px 30px;
-  height: 70px;
-  line-height: 70px;
-  margin: auto;
+::selection{
+  background: #a3f5ec;
+}
+header nav{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 12;
+}
+.navbar{
+  width: 90%;
   display: flex;
+  margin: 20px auto 0 auto;
   align-items: center;
   justify-content: space-between;
 }
-.wrapper .logo a{
-  color: #f2f2f2;
-  font-size: 25px;
-  font-weight: 600;
-  text-decoration: none;
+  header nav .logo{
+  height: 80px;
+  width: 150px;
 }
-.wrapper .nav-links{
-  display: inline-flex;
-}
-.nav-links li{
-  list-style: none;
-}
-.nav-links li a{
-  color: #f2f2f2;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  padding: 9px 15px;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-}
-.nav-links li a:hover{
-  background: #3A3B3C;
-}
-.nav-links .mobile-item{
-  display: none;
-}
-.nav-links .drop-menu{
-  position: absolute;
-  background: #242526;
-  width: 600px;
-  line-height: 45px;
-  top: 85px;
-  opacity: 0;
-  visibility: hidden;
-  box-shadow: 0 16px 20px rgba(0,0,0,0.15);
-}
-.nav-links li:hover .drop-menu,
-.nav-links li:hover .mega-box{
-  transition: all 0.3s ease;
-  top: 70px;
-  opacity: 1;
-  visibility: visible;
-}
-.drop-menu li a{
-  width: 200%;
-  display: inline-block;
-  padding: 15px;
-  font-weight: 400;
-  border-radius: 0px;
-}
-.mega-box{
-  position: absolute;
-  left: 0;
-  width: 100%;
-  padding: 0 30px;
-  top: 85px;
-  opacity: 0;
-  visibility: hidden;
-}
-.mega-box .content{
-  background: #242526;
-  padding: 25px 20px;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-}
-.mega-box .content .row{
-  width: calc(25% - 30px);
-  line-height: 45px;
-}
-.content .row img{
-  width: 100%;
+.logo img{
   height: 100%;
-  object-fit: cover;
+  width: 100%;
+  object-fit: contain;
 }
-.content .row header{
-  color: #f2f2f2;
-  font-size: 20px;
-  font-weight: 500;
-}
-.content .row .mega-links{
-  margin-left: -40px;
-  border-left: 1px solid rgba(255,255,255,0.09);
-}
-.row .mega-links li{
-  padding: 0 20px;
-}
-.row .mega-links li a{
-  padding: 0px;
-  padding: 0 20px;
-  color: #d9d9d9;
-  font-size: 14px;
-  display: block;
-}
-.row .mega-links li a:hover{
-  color: #f2f2f2;
-}
-.wrapper .btn{
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  display: none;
-}
-.wrapper .btn.close-btn{
-  position: absolute;
-  right: 30px;
-  top: 10px;
-}
-.heading{
-    padding-top: 90px;
-    font-size: 40px;
-}
-.heading p{
-    padding-top: 20px;
-    font-size: 20px;
-}
-@media screen and (max-width: 970px) {
-  .wrapper .btn{
-    display: block;
-  }
-  .wrapper .nav-links{
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    max-width: 350px;
-    top: 0;
-    left: -100%;
-    background: #242526;
-    display: block;
-    padding: 50px 10px;
-    line-height: 50px;
-    overflow-y: auto;
-    box-shadow: 0px 15px 15px rgba(0,0,0,0.18);
-    transition: all 0.3s ease;
-  }
-  /* custom scroll bar */
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #242526;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #3A3B3C;
-  }
-  #menu-btn:checked ~ .nav-links{
-    left: 0%;
-  }
-  #menu-btn:checked ~ .btn.menu-btn{
-    display: none;
-  }
-  #close-btn:checked ~ .btn.menu-btn{
-    display: block;
-  }
-  .nav-links li{
-    margin: 15px 10px;
-  }
-  .nav-links li a{
-    padding: 0 20px;
-    display: block;
-    font-size: 20px;
-  }
-  .nav-links .drop-menu{
-    position: static;
-    opacity: 1;
-    top: 65px;
-    visibility: visible;
-    padding-left: 20px;
-    width: 100%;
-    max-height: 0px;
-    overflow: hidden;
-    box-shadow: none;
-    transition: all 0.3s ease;
-  }
-  #showDrop:checked ~ .drop-menu,
-  #showMega:checked ~ .mega-box{
-    max-height: 100%;
-  }
-  .nav-links .desktop-item{
-    display: none;
-  }
-  .nav-links .mobile-item{
-    display: block;
-    color: #f2f2f2;
-    font-size: 20px;
-    font-weight: 500;
-    padding-left: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-  }
-  .nav-links .mobile-item:hover{
-    background: #3A3B3C;
-  }
-  .drop-menu li{
-    margin: 0;
-  }
-  .drop-menu li a{
-    border-radius: 5px;
-    font-size: 18px;
-  }
-  .mega-box{
-    position: static;
-    top: 65px;
-    opacity: 1;
-    visibility: visible;
-    padding: 0 20px;
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  .mega-box .content{
-    box-shadow: none;
-    flex-direction: column;
-    padding: 20px 20px 0 20px;
-  }
-  .mega-box .content .row{
-    width: 100%;
-    margin-bottom: 15px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-  }
-  .mega-box .content .row:nth-child(1),
-  .mega-box .content .row:nth-child(2){
-    border-top: 0px;
-  }
-  .content .row .mega-links{
-    border-left: 0px;
-    padding-left: 15px;
-  }
-  .row .mega-links li{
-    margin: 0;
-  }
-  .content .row header{
-    font-size: 19px;
-  }
-}
-nav input{
-  display: none;
-}
-    </style>
-  </head>
-<body>
-      <nav>
-    <div class="wrapper">
-      <div class="logo"><a href="index.html">DancingSoulofDhwani</a></div>
-      <input type="radio" name="slider" id="menu-btn">
-      <input type="radio" name="slider" id="close-btn">
-      <ul class="nav-links">
-        <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-        <li><a href="#">Home</a></li>
-        <li>
-          <a href="#" class="desktop-item">Channels</a>
-          <input type="checkbox" id="showDrop">
-          <label for="showDrop" class="mobile-item">Channels</label>
-          <ul class="drop-menu">
-            <li><a href="#">Dhwani Jain 6 C</a></li>
-            <li><a href="#">Dancing Soul Of Dhwani</a></li>
-          </ul>
-        <li><a href="#">About</a></li>
-        </li>
-        <li>
-          <a href="#" class="desktop-item">Categories</a>
-          <input type="checkbox" id="showMega">
-          <label for="showMega" class="mobile-item">Categories</label>
-          <div class="mega-box">
-            <div class="content">
-              <div class="row">
-                <img src="IMG-20210806-WA0014.jpg" alt="">
-              </div>
-              <div class="row">
-                <header>My videos Categories</header>
-                <ul class="mega-links">
-                  <li><a href="#">Transition Videos</a></li>
-                  <li><a href="#">Garba</a></li>
-                  <li><a href="#">Easy Dance</a></li>
-                  <li><a href="#">Jain Song Dance</a></li>
-                  <li><a href="#">Kids Dance</a></li>
-                  <li><a href="#">Mothers Day Dance</a></li>
-                  <li><a href="#">Fathers Day Dance</a></li>
-                  <li><a href="#">Bollywood Dance Cover</a></li>
-                  <li><a href="#">life hacks</a></li>
-
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#">Sitting Choreography</a></li>
-                  <li><a href="#">Salsa</a></li>
-                  <li><a href="#">SANGEET CHOREOGRAPHY</a></li>
-                  <li><a href="#">Fun Dance</a></li>
-                  <li><a href="#">Belly Dance</a></li>
-                  <li><a href="#">Classical Dance</a></li>
-                  <li><a href="">Freestyle</a></li>
-                  <li><a href="">Western</a></li>
-                  <li><a href="">Indian</a></li>
-                  <li><a href="#">Dares</a></li>  
-                  <li><a href="#">Funny Videos</a></li>
-                   <li><a href="#">Fun Shorts</a></li>
-                </ul>
-              </div>
-              <div class="row">
-                <ul class="mega-links">
-                  <li><a href="#">Kpop Dance Cover</a></li>
-                  <li><a href="#">Semi Classical</a></li>
-                  <li><a href="#">Patriotic Song Dance</a></li>
-                  <li><a href="#">Celebration</a></li>
-                  <li><a href="#">Crafts</a></li>
-                  <li><a href="#">Drawing</a></li>
-                  <li><a href="#">Pranks</a></li>
-                  <li><a href="#">Challenges</a></li>
-                  <li><a href="#">Behind The Scenes</a></li>
-                  <li><a href="#">Guessing</a></li>
-                  <li><a href="#">Diy</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
-      </li>
-      </ul>
-      <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
-    </div>
-  </nav>
-  <div class="heading">
-    <center>
-      <h2>Welcome To Dancing Soul of Dhwani</h2>
-      <p>Hi there this is <b>Dhwani Jain</b> and in this website<br> you can see all my previously and recently uploaded websites.</p><br><br>
-      <div class="intro">
-        <h1>I'm a</h1>
-        <h1 class="typing"></h1>
-      </div>
-      <style>
-        .intro{
-          display: flex;
-          color: #030303;
-          height: 100vh;
-          text-align: center;
-        }
-        .typing{
-          margin-left: 10px;
-        }
-        .typing::after{
-          content: '';
-          position: absolute;
-          width: 1px;
-          height: 8%;
-          border-right: 4px solid black;
-          animation: blink 0.5s infinite ease;
-        }
-        @keyframes blink{
-          0%{
-            opacity: 0;
-          }
-          100%{
-            opacity: 1;
-          }
-        }
-      </style>
-      <script>
-const texts = ["Dancer", "Youtuber", "Creator"]
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type(){
-
-    if (count === texts.length){
-        count = 0;
-    }
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
-
-    document.querySelector(".typing").textContent = letter;
-    if (letter.length === currentText.length){
-        count++;
-        index = 0;
-    }
-    setTimeout(type, 400);
-})();
-
-      </script>
-  </center>
-     <br><h2 style="text-align: center;">
-      Mostly Viewed Videos
-    </h2><br><br>
-  <div class="row">
-  <div class="col-sm-3">
-    <div class="card2">
-      <div class="zoom">
-      <img src="hqdefault(10).jpg" class="card-img-top" alt="...">
-        <style>
-          .card2{
-  box-shadow: 70px 70px 10px 0 rgba(0, 0, 0, 0.2);
-            width: 400px;
-            padding: 30px;
-          }
-.zoom {
-  transition: transform .70s; /* Animation */
-  width: 340px;
-  height: 30px;
-  margin: 50% auto;
-}
-
-.zoom:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-</style>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Maine Payal Hai | Dancing Soul Of Dhwani</h5>
-        <p class="card-text">Maine Payal hai chhankai<br>
-                            Aankh mein kajra <br>
-                            Chunnad udd udd jaye.</p>
-        <a href="https://www.youtube.com/embed/96kGe-YQbPE" class="btn btn-primary">See the Video</a>
-      </div>
-    </div>
-</div>
-<br><br><BR><BR>
-</style>
-    <div class="card3">
-      <div class="zoom">
-      <img src="hqdefault(11).jpg" class="card-img-top" alt="...">
-        <style>
-          .row{
-            display: flex;
-            padding: 10px;
-            justify-content: space-evenly;
-          }
-          .card2,
-          .card3{
-            display: block;
-          }
-          .card3{
-  box-shadow: 70px 70px 10px 0 rgba(0, 0, 0, 0.2);
-            width: 400px;
-            padding: 20px;
-          }
-.zoom {
-  transition: transform .70s; /* Animation */
-  width: 340px;
-  height: 30px;
-  margin: 50% auto;
-}
-
-.zoom:hover {
-  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-</style>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">Chhor denge dance/Dancing Soul Of Dhwani</h5>
-        <p class="card-text">Chhor denge song dance by Dhwani</p>
-        <a href="https://www.youtube.com/embed/LrerFH0xUOo" class="btn btn-primary">See the Video</a>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<h1 style="text-align: center;padding: 60px 10px 30px;">Contact</h1>
-<center>
-
-<div class="card">
-  <img src="IMG-20210806-WA0014.jpg" alt="Dhwani Jain" style="width:100%">
-  <h1>Dhwani Jain</h1>
-  <p class="title">Youtuber</p>
-  <p>Dancing Soul Of Dhwani</p>
-  <a href="mailto:dhwanijain054@gmail.com"><i class="fa fa-envelope"></i></a>
- <a href="https://www.youtube.com/channel/UC7MGcDqRCJzl_IKbdNlckuA"><i class="fa fa-youtube-play"></i>
-  <p><button>Contact</button></p>
-</div>
-  <style>
-  .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-.card a  i{
-  color: green;
-  font-size: 40px;
+nav .menu{
   display: flex;
 }
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+nav .menu li{
+  list-style: none;
+  margin: 0 10px;
 }
-
-a {
+nav .menu a{
+  color: #2c3e50;
+  font-size: 17px;
+  font-weight: 500;
   text-decoration: none;
-  font-size: 22px;
-  color: black;
 }
-
-button:hover, a:hover {
-  opacity: 0.7;
+nav .menu a:hover{
+  color: #000;
 }
-
-  </style>
-<br><br>
-</div><BR><BR>
-</style><br><br><br><br><br><br><br><br>
-
-</div>
-</body>
-</html>
+nav .search-box{
+  position: relative;
+  height: 40px;
+  width: 250px;
+}
+.search-box input[type="text"]{
+  position: absolute;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  outline: none;
+  color: #2c3350;
+  border: 2px solid #2c3350;
+  background: #f2f2f2;
+  padding: 0 10px 0 40px;
+}
+.search-box a{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 20px;
+  color: #2c3350;
+  transform: translateY(-50%);
+  border-right: 2px solid #2c3350;
+  padding: 0 5px 0 0;
+}
+.text-content{
+  position: absolute;
+  top: 33%;
+  left: 7%;
+  z-index: 12;
+}
+header .text-content .text{
+  font-size: 27px;
+  color: #2c3350;
+}
+header .text-content .name{
+color: #2c3350;
+ font-size: 75px;
+ font-weight: 600;
+ margin: -20px 0 0 -3px;
+}
+header .text-content .job{
+ color: #2c3350;
+ font-size: 40px;
+ margin: 5px 0;
+ margin-top: -4px;
+ display: flex;
+}
+.text-content .typing-text{
+  margin-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #1de2d1;
+  animation: typing 5s steps(15) infinite;
+}
+@keyframes typing{
+  0%{
+    width: 0ch;
+  }
+  50%{
+    width: 15ch;
+  }
+  100%{
+    width: 0ch;
+  }
+}
+.text-content .job .one{
+  color: #1de2d1;
+}
+.text-content .job .two{
+  color: #1de2d1;
+}
+.buttons{
+  margin: 20px 0 0 50px;
+}
+.text-content .buttons button{
+  outline: none;
+  margin: 0 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-image: linear-gradient( 135deg, #2AFADF     10%, #C346C2 100%);
+}
+.buttons button:hover{
+  transform: scale(0.97);
+}
+.content .girl img{
+  position: absolute;
+  height: 95%;
+  bottom: 0;
+  right: 80px;
+  position: absolute;
+}
+header .media-icons{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+.media-icons a{
+ margin-top: 8px;
+ font-size: 20px;
+ font-weight: 500;
+ text-decoration: none;
+ opacity: 0.7;
+ color: #2c3350;
+ transition: all 0.3s ease;
+}
+.media-icons a:hover{
+ opacity: 1;
+}
+</style> 
+	</BODY>
+	</HTML>
